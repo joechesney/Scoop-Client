@@ -10,6 +10,7 @@ import six from './images/six.jpg';
 import three from './images/three.jpg';
 import four from './images/four.jpg';
 import five from './images/five.jpg';
+import gitHubLogo from './images/github-logo.svg';
 import Footer from './Components/Footer';
 import secrets from './secrets.js';
 let scoop_server = secrets().scoop_server;
@@ -36,7 +37,7 @@ class App extends Component {
             <Route path="/scoopDeals" render={()=><Container endpoint={`${scoop_server}/scoop/scoopDeals`} picture={five} pageName="Scoop Deals" />} />
             {/* <Route path="/product" render={()=><Product endpoint={`${scoop_server}/scoop/product`} />} /> */}
           </div>
-          <Footer />
+          <Footer githubLogo={gitHubLogo}/>
         </div>
       </Router>
     );

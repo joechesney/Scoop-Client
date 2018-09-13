@@ -218,6 +218,8 @@ blockquote p {
 /******    Media Queries     *****/
 
 @media screen and (max-width: 800px) {
+
+  /****    Navbar    ****/
   ul.navbar {
     display: flex;
     justify-content: space-evenly;
@@ -240,6 +242,8 @@ blockquote p {
     font-size: 2em;
   }
 
+  /****    Product Cards    *****/
+
   div.ui.cards {
     justify-content: space-around;
   }
@@ -248,5 +252,28 @@ blockquote p {
     margin-top: 2em !important;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  /**** Footer    ****/
+
+
+  .footer {
+    margin-top: 2em;
+    /* margin-bottom: 2em; */
+    background-color: #f6870f;
+    color: #414141;
+    min-height: 7vh;
+    /* position: absolute;
+    bottom: 0; */
+    width: 100%;
+  }
+
+  .footerContainer {
+    display: flex;
+    /* justify-content: space-evenly; */
+  }
+
+  .footerSection {
+    width: 25vw;
   }
 }
