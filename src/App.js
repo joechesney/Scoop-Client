@@ -13,7 +13,6 @@ import five from './images/five.jpg';
 import gitHubLogo from './images/github-logo.svg';
 import Footer from './Components/Footer';
 import secrets from './secrets.js';
-let scoop_server = secrets().scoop_server;
 
 class App extends Component {
   constructor(props) {
@@ -30,12 +29,12 @@ class App extends Component {
           <Navbar />
 
           <div >
-            <Route exact path="/" render={()=><Home endpoint={`${scoop_server}/scoop/homePage`} picture={one} pageName="Scoop" />} />
-            <Route path="/myFeed" render={()=><Container endpoint={`${scoop_server}/scoop/myFeed`} picture={six} pageName="My Feed" />} />
-            <Route path="/myWatchlist" render={()=><Container endpoint={`${scoop_server}/scoop/myWatchlist`} picture={three} pageName="My Watchlist" />} />
-            <Route path="/reverbDeals" render={()=><Container endpoint={`${scoop_server}/scoop/reverbDeals`} picture={four} pageName="Reverb Deals" />} />
-            <Route path="/scoopDeals" render={()=><Container endpoint={`${scoop_server}/scoop/scoopDeals`} picture={five} pageName="Scoop Deals" />} />
-            {/* <Route path="/product" render={()=><Product endpoint={`${scoop_server}/scoop/product`} />} /> */}
+            <Route exact path="/" render={()=><Home endpoint={`${secrets.scoop_server}/scoop/homePage`} picture={one} pageName="Scoop" />} />
+            <Route path="/myFeed" render={()=><Container endpoint={`${secrets.scoop_server}/scoop/myFeed`} picture={six} pageName="My Feed" />} />
+            <Route path="/myWatchlist" render={()=><Container endpoint={`${secrets.scoop_server}/scoop/myWatchlist`} picture={three} pageName="My Watchlist" />} />
+            <Route path="/reverbDeals" render={()=><Container endpoint={`${secrets.scoop_server}/scoop/reverbDeals`} picture={four} pageName="Reverb Deals" />} />
+            <Route path="/scoopDeals" render={()=><Container endpoint={`${secrets.scoop_server}/scoop/scoopDeals`} picture={five} pageName="Scoop Deals" />} />
+            {/* <Route path="/product" render={()=><Product endpoint={`${secrets.scoop_server}/scoop/product`} />} /> */}
           </div>
           <Footer githubLogo={gitHubLogo}/>
         </div>
