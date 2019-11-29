@@ -36,7 +36,7 @@ class Container extends React.Component {
   handleShowMore() {
     console.log('this state',this.state);
     axios.post(this.state.endpoint, {nextPage: this.state.nextPage})
-    .then(response=>{
+    .then(response => {
       console.log('response from api2',response);
       this.setState(prevState=> {
         return {
@@ -57,7 +57,7 @@ class Container extends React.Component {
         <div className="page-container">
           {this.state.loading ? <div className="loading centered"> <h1>Loading {this.state.pageName} <Icon loading name='spinner' /> </h1> </div> :
           <Card.Group>
-            {
+            {this.state.products &&
               this.state.products.filter(product=>product.SCOOP !== undefined).map((product)=>(
                   <span key={product.id}>
                     <ProductCard

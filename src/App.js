@@ -29,12 +29,12 @@ class App extends Component {
           <Navbar />
 
           <div >
-            <Route exact path="/" render={()=><Home endpoint={`${secrets.scoop_server}/scoop/homePage`} picture={one} pageName="Scoop" />} />
-            <Route path="/myFeed" render={()=><Container endpoint={`${secrets.scoop_server}/scoop/myFeed`} picture={six} pageName="My Feed" />} />
-            <Route path="/myWatchlist" render={()=><Container endpoint={`${secrets.scoop_server}/scoop/myWatchlist`} picture={three} pageName="My Watchlist" />} />
-            <Route path="/reverbDeals" render={()=><Container endpoint={`${secrets.scoop_server}/scoop/reverbDeals`} picture={four} pageName="Reverb Deals" />} />
-            <Route path="/scoopDeals" render={()=><Container endpoint={`${secrets.scoop_server}/scoop/scoopDeals`} picture={five} pageName="Scoop Deals" />} />
-            {/* <Route path="/product" render={()=><Product endpoint={`${secrets.scoop_server}/scoop/product`} />} /> */}
+            <Route exact path="/" render={()=><Home endpoint={`${secrets.scoopServer}/homePage`} picture={one} pageName="Scoop" />} />
+            <Route path="/myFeed" render={()=><Container endpoint={`${secrets.scoopServer}/myFeed`} picture={six} pageName="My Feed" />} />
+            <Route path="/myWatchlist" render={()=><Container endpoint={`${secrets.scoopServer}/myWatchlist`} picture={three} pageName="My Watchlist" />} />
+            <Route path="/reverbDeals" render={()=><Container endpoint={`${secrets.scoopServer}/reverbDeals`} picture={four} pageName="Reverb Deals" />} />
+            <Route path="/scoopDeals" render={()=><Container endpoint={`${secrets.scoopServer}/scoopDeals`} picture={five} pageName="Scoop Deals" />} />
+            {/* <Route path="/product" render={()=><Product endpoint={`${secrets.scoopServer}/scoop/product`} />} /> */}
           </div>
           <Footer githubLogo={gitHubLogo}/>
         </div>
